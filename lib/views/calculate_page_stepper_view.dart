@@ -157,7 +157,7 @@ class _StepperViewState extends State<StepperView> {
             "စိုက်ပျိုးဒေသ",
             style: Theme.of(context).textTheme.title,
           ),
-          // TODO move radio list tile to the left
+          // TODO fix radio button padding
           RadioListTile(
             title: Text("နွေရာသီ"),
             groupValue: _radioValue,
