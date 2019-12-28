@@ -89,8 +89,10 @@ class _StepperViewState extends State<StepperView> {
             style: Theme.of(context).textTheme.title,
           ),
           DropdownButtonFormField(
-            // TODO examine why isDense is not working
             // isDense: true,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
             hint: Container(
               child: Text(
                 "ဒေသ",
@@ -106,6 +108,9 @@ class _StepperViewState extends State<StepperView> {
             height: 20,
           ),
           DropdownButtonFormField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
             hint: Text("မြို့နယ်"),
             items: [],
             onChanged: (item) {},
@@ -114,6 +119,9 @@ class _StepperViewState extends State<StepperView> {
             height: 20,
           ),
           DropdownButtonFormField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
             // isDense: true,
             hint: Text("ကျေးရွာအုပ်စု"),
             items: [],
@@ -124,6 +132,9 @@ class _StepperViewState extends State<StepperView> {
           ),
           DropdownButtonFormField(
             // isDense: true,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
             hint: Text("ကျေးရွာ"),
             items: [],
             onChanged: (item) {},
@@ -198,6 +209,9 @@ class _StepperViewState extends State<StepperView> {
             style: Theme.of(context).textTheme.title,
           ),
           DropdownButtonFormField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+            ),
             onChanged: (value) {},
             items: [],
             hint: Text("အမျိုးအစားရွေးရန်"),
@@ -222,6 +236,8 @@ class _StepperViewState extends State<StepperView> {
               style: Theme.of(context).textTheme.title,
             ),
             TextFormField(
+              // decoration: InputDecoration(
+              //     contentPadding: EdgeInsets.symmetric(horizontal: 16.0)),
               initialValue: "00",
               keyboardType: TextInputType.number,
               inputFormatters: [WhitelistingTextInputFormatter.digitsOnly],

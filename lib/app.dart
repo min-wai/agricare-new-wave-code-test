@@ -29,6 +29,11 @@ class MyApp extends StatelessWidget {
               color: Color(0x52000000),
             )),
             isDense: true,
+            disabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+              width: 2.0,
+              color: Color(0x52000000),
+            )),
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
               width: 2.0,
