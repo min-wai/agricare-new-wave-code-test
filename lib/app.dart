@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
           // TODO replace theme font
           toggleableActiveColor: Color(0xfff7ca6c),
           inputDecorationTheme: InputDecorationTheme(
+            contentPadding:
+                EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
             border: OutlineInputBorder(
                 borderSide: BorderSide(
               width: 2.0,

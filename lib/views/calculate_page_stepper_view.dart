@@ -16,6 +16,7 @@ class _StepperViewState extends State<StepperView> {
   List<CustomStep> steps;
   int _currentStep = 0;
   String _radioValue = "ဆောင်းရာသီ";
+  double _dividerHeight = 28.0;
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +89,10 @@ class _StepperViewState extends State<StepperView> {
             "စိုက်ပျိုးဒေသ",
             style: Theme.of(context).textTheme.title,
           ),
+          Divider(
+            height: _dividerHeight,
+            thickness: 0.0,
+          ),
           DropdownButtonFormField(
             // isDense: true,
             decoration: InputDecoration(
@@ -101,7 +106,12 @@ class _StepperViewState extends State<StepperView> {
                 ),
               ),
             ),
-            items: [],
+            items: [
+              DropdownMenuItem(
+                child: Text("Yangon"),
+                value: "Yangon",
+              ),
+            ],
             onChanged: (item) {},
           ),
           SizedBox(
@@ -154,8 +164,12 @@ class _StepperViewState extends State<StepperView> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "စိုက်ပျိုးဒေသ",
+            "ရာသီဥတု",
             style: Theme.of(context).textTheme.title,
+          ),
+          Divider(
+            height: _dividerHeight,
+            thickness: 0.0,
           ),
           // TODO fix radio button padding
           Row(
@@ -232,6 +246,10 @@ class _StepperViewState extends State<StepperView> {
             "သီးနှံအမျိုးအစား",
             style: Theme.of(context).textTheme.title,
           ),
+          Divider(
+            height: _dividerHeight,
+            thickness: 0.0,
+          ),
           DropdownButtonFormField(
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -258,6 +276,12 @@ class _StepperViewState extends State<StepperView> {
             Text(
               "စိုက်ပျိုးမည့်ဧက",
               style: Theme.of(context).textTheme.title,
+            ),
+            Container(
+              child: Divider(
+                height: _dividerHeight,
+                thickness: 0.0,
+              ),
             ),
             TextFormField(
               // decoration: InputDecoration(
