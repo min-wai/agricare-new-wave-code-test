@@ -677,7 +677,7 @@ class _CustomStepperState extends State<CustomStepper>
                 ),
               ),
               Container(
-                margin: const EdgeInsetsDirectional.only(start: 12.0),
+                margin: const EdgeInsetsDirectional.only(start: 0.0),
                 child: _buildHeaderText(i),
               ),
             ],
@@ -686,9 +686,16 @@ class _CustomStepperState extends State<CustomStepper>
         if (!_isLast(i))
           Expanded(
             child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 8.0),
+              margin: EdgeInsetsDirectional.only(
+                start: widget.steps[i].state == CustomStepState.editing
+                    ? 8.0
+                    : 0.0,
+                end: widget.steps[i + 1].state == CustomStepState.editing
+                    ? 8.0
+                    : 0.0,
+              ),
               height: 1.0,
-              color: Colors.grey.shade400,
+              color: Color(0xFF7CB26F),
             ),
           ),
       ],
