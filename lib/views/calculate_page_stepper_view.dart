@@ -158,35 +158,59 @@ class _StepperViewState extends State<StepperView> {
             style: Theme.of(context).textTheme.title,
           ),
           // TODO fix radio button padding
-          RadioListTile(
-            title: Text("နွေရာသီ"),
-            groupValue: _radioValue,
-            onChanged: (value) {
-              setState(() {
-                _radioValue = value;
-              });
-            },
-            value: "နွေရာသီ",
+          Row(
+            children: <Widget>[
+              Radio(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                groupValue: _radioValue,
+                onChanged: (value) {
+                  setState(() {
+                    _radioValue = value;
+                  });
+                },
+                value: "နွေရာသီ",
+              ),
+              Text(
+                "နွေရာသီ",
+                style: Theme.of(context).textTheme.subhead,
+              ),
+            ],
           ),
-          RadioListTile(
-            title: Text("မိုးရာသီ"),
-            groupValue: _radioValue,
-            onChanged: (value) {
-              setState(() {
-                _radioValue = value;
-              });
-            },
-            value: "မိုးရာသီ",
+          Row(
+            children: <Widget>[
+              Radio(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                groupValue: _radioValue,
+                onChanged: (value) {
+                  setState(() {
+                    _radioValue = value;
+                  });
+                },
+                value: "မိုးရာသီ",
+              ),
+              Text(
+                "မိုးရာသီ",
+                style: Theme.of(context).textTheme.subhead,
+              ),
+            ],
           ),
-          RadioListTile(
-            title: Text("ဆောင်းရာသီ"),
-            groupValue: _radioValue,
-            onChanged: (value) {
-              setState(() {
-                _radioValue = value;
-              });
-            },
-            value: "ဆောင်းရာသီ",
+          Row(
+            children: <Widget>[
+              Radio(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                groupValue: _radioValue,
+                onChanged: (value) {
+                  setState(() {
+                    _radioValue = value;
+                  });
+                },
+                value: "ဆောင်းရာသီ",
+              ),
+              Text(
+                "ဆောင်းရာသီ",
+                style: Theme.of(context).textTheme.subhead,
+              ),
+            ],
           ),
         ],
       ),
