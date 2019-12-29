@@ -21,13 +21,10 @@ class _CalculatePageState extends State<CalculatePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Theme(
-            data: Theme.of(context),
-            child: AppBarWithBackButton(
-              backgroundColor: Theme.of(context).canvasColor,
-              textColor: Color(0xFFF7CA6C),
-              iconColor: Colors.green.shade400,
-            ),
+          AppBarWithBackButton(
+            backgroundColor: Theme.of(context).canvasColor,
+            textColor: Color(0xFFF7CA6C),
+            iconColor: Colors.green.shade400,
           ),
           ChangeNotifierProvider.value(
             value: CalculatePageModel(),
