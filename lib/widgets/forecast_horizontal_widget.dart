@@ -7,7 +7,15 @@ class ForecastHorizontalWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData.dark(),
+      data: Theme.of(context).copyWith(
+        iconTheme:
+            Theme.of(context).iconTheme.copyWith(color: Color(0xffDBEAD8)),
+        textTheme: Theme.of(context).textTheme.apply(
+              displayColor: Color(0xffDBEAD8),
+              bodyColor: Color(0xffDBEAD8),
+              decorationColor: Color(0xffDBEAD8),
+            ),
+      ),
       child: Builder(
         builder: (context) {
           return Padding(

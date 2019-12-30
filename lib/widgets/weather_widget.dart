@@ -6,25 +6,32 @@ class WeatherWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData.dark(),
+      data: Theme.of(context).copyWith(
+        iconTheme:
+            Theme.of(context).iconTheme.copyWith(color: Color(0xffDBEAD8)),
+        textTheme: Theme.of(context).textTheme.apply(
+              displayColor: Color(0xffEDF4EB),
+              bodyColor: Color(0xffDBEAD8),
+              decorationColor: Color(0xffDBEAD8),
+            ),
+      ),
       child: Builder(
         builder: (context) {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-            child: Container(
-              child: ListTile(
-                contentPadding: EdgeInsets.zero,
-                title: Text(
-                  "33°",
-                  style: Theme.of(context).textTheme.display1,
-                ),
-                subtitle: Text("Sunny 33 / 26°C"),
-                trailing: Padding(
-                  padding: EdgeInsets.only(right: 28),
-                  child: Icon(
-                    WeatherIcons.day_cloudy,
-                    size: Theme.of(context).textTheme.display3.fontSize,
-                  ),
+            child: ListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(
+                "33°",
+                style: Theme.of(context).textTheme.display1,
+              ),
+              subtitle: Text("Sunny 33 / 26°C"),
+              trailing: Padding(
+                padding: EdgeInsets.only(right: 28),
+                child: Icon(
+                  WeatherIcons.day_cloudy,
+                  color: Theme.of(context).iconTheme.color,
+                  size: Theme.of(context).textTheme.display3.fontSize,
                 ),
               ),
             ),

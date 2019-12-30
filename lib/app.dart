@@ -8,6 +8,7 @@ import 'package:agri_care/pages/order_page.dart';
 import 'package:agri_care/pages/register_page.dart';
 import 'package:agri_care/pages/shop_detail_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
           // accentColor: Color(0xfff7ca6c),
           // TODO replace theme font
+          textTheme: GoogleFonts.ralewayTextTheme(),
           toggleableActiveColor: Color(0xfff7ca6c),
           inputDecorationTheme: InputDecorationTheme(
             contentPadding:
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
           buttonTheme: ButtonThemeData(
             buttonColor: Colors.green.shade400,
             shape: StadiumBorder(),
-            textTheme: ButtonTextTheme.normal,
+            textTheme: ButtonTextTheme.primary,
           )),
       routes: {
         OnBoardingPage.routeName: (context) => OnBoardingPage(),
