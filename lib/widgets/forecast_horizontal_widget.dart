@@ -28,7 +28,7 @@ class ForecastHorizontalWidget extends StatelessWidget {
                 itemCount: Database.weathers.length,
                 separatorBuilder: (context, index) {
                   return SizedBox(
-                    width: 32,
+                    width: 28,
                   );
                 },
                 scrollDirection: Axis.horizontal,
